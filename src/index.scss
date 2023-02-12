@@ -1,0 +1,240 @@
+.home{
+  background:url(https://cdn2.chakray.com/wp-content/uploads/2021/04/shutterstock_573112123.jpg);
+  height: 750px;
+}
+.header_home{
+  background-color: rgba(0, 0, 0, 0.791);
+  height: 70px;
+  border-bottom: 1px solid aqua;
+  li{
+    list-style: none;
+    font-weight: 500;
+    font-size: 20px;
+    color:white;
+    &:hover{
+      color:aqua;
+      transition: .3s ease-in-out;
+    }
+  }
+  a{
+    text-decoration: none;
+    color:white;
+    &:hover{
+      color:aqua;
+      transition: .3s ease-in-out;
+    }
+  }
+  h1{
+    margin-left: 70px;
+    font-weight: 700;
+    color:white;
+    &:hover{
+      color:aqua;
+      transition: .3s ease-in-out;
+    }
+  }
+}
+.sort{
+  margin-top: 200px;
+  border-radius:10px;
+  background: rgba(0, 0, 0, 0.37);
+  box-shadow: rgba(3, 249, 249, 0.25) 0px 54px 55px, rgba(3, 249, 249, 0.12) 0px -12px 30px, rgba(3, 249, 249, 0.12) 0px 4px 6px, rgba(3, 249, 249, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  h1{
+    font-size: 4rem;
+    font-weight: bold;
+    color:white;
+  }
+  p{
+    color:white;
+    font-size: 28px;
+  }
+  .btn_1{
+    border-radius:none;
+    margin-right: 10px;
+  }
+  .btn_2{
+    background: white;
+    &:hover{
+      background: aqua;
+    }
+  }
+}
+.sign_up{
+  margin-top: 30px;
+  h2{
+    font-size: 3rem;
+    font-weight: bold;
+    color:#17a2b8;
+  }
+  i{
+    margin-right: 15px;
+  }
+  input{
+    height: 40px;
+
+  }
+  p{
+    font-size: 12px;
+    color:rgba(0, 0, 0, 0.464);
+  }
+  .show{
+    border:1px solid white;
+    position: absolute;
+    margin-left: 1010px;
+    margin-top: 12px;
+    background: white;
+      &:hover{
+        color:aqua;
+      }
+    
+  }
+  .reg{
+    background: #17a2b8;
+    width: 100px;
+    border:none;
+    color:white;
+    font-size: 16px;
+  }
+  .bot{
+    a{
+      text-decoration: none;
+      margin-left: 10px;
+      color:#17a2b8;
+      font-size: 17px;
+    }
+  }
+}
+.sign_in{
+  margin-top: 30px;
+  h2{
+    font-size: 3rem;
+    font-weight: bold;
+    color:#17a2b8;
+  }
+  i{
+    margin-right: 15px;
+  }
+  input{
+    height: 40px;
+
+  }
+  .sign_in{
+    background: #17a2b8;
+    width: 100px;
+    margin-top: 30px;
+    border:none;
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+  }
+  .bot{
+    a{
+      text-decoration: none;
+    }
+  }
+}
+.dashboard{
+  margin-top: 30px;
+  h2{
+    font-size: 3rem;
+    font-weight: bold;
+    color:#17a2b8;
+  }
+  .link_1{
+    color:white;
+    text-decoration: none;
+  }
+  button{
+    background: #17a2b8;
+    padding: 8px;
+    width: 140px;
+    border:none;
+    color:white;
+  }
+  
+}
+.post{
+  margin-top: 30px;
+  h2{
+    font-size: 3rem;
+    font-weight: bold;
+    color:#17a2b8;
+  }
+  .say{
+    background: #17a2b8;
+    padding: 8px;
+    width: 140px;
+    border:none;
+    color:white;
+    text-align: left;
+    font-size:1.5rem;
+  }
+  .sub{
+    background: rgba(0, 0, 0, 0.638);
+    padding: 8px;
+    width: 100px;
+    color:white;
+  }
+  .user{
+    padding:20px 50px ;
+    border: 1px solid black;
+    img{
+      border-radius:50%;
+    }
+    .user_left{
+      p{
+        text-align: center;
+        color:#17a2b8;
+        font-weight: bold;
+      }
+      
+    }
+    .user_right{
+      margin-left: 100px ;
+      p{
+        text-transform: uppercase;
+        font-size: 1.5rem;
+      }
+      button{
+        border:none;
+        margin-right: 10px;
+      }
+      small{
+        color:rgba(0, 0, 0, 0.476);
+      }
+      .dis{
+          background: #17a2b8;
+          padding: 8px;
+          color:white;
+      }
+      .likes{
+        width: 50px;
+      }
+    }
+  }
+
+}
+.develop_1{
+  margin-top: 20px;
+  .view{
+    background:#17a2b8 ;
+    text-decoration: none;
+    padding: 8px;
+    color:white;
+  }
+  padding: 20px;
+  background: #eee;
+  border:1px solid black;
+  img{
+    border-radius:50%;
+  }
+  .skill{
+    margin-right: 50px;
+    li{
+      list-style: none;
+      font-weight: bold;
+      color:#17a2b8;
+    }
+  }
+}
+
