@@ -1,8 +1,26 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import Headers_2 from '../Components/Headers_2'
+// import Calendar from 'react-calendar';
 
 const ViewProfile = () => {
+  const {id} = useParams()
+  let token = localStorage.getItem("token")
+ 
+  const [data , useData] = useState()
+  useEffect(() => {
+
+    async function getdevelop() {
+        let {data} = await axios.get(`profile/user/${id}`)
+         useData(data)
+   
+      } 
+
+    getdevelop();
+    
+  }, [])
+
   return (
     <div>
         <Headers_2/>
@@ -10,34 +28,42 @@ const ViewProfile = () => {
         <form >
             <Link to="/developers" className='back_to' >Back To Profiles</Link>
             <div className="user_about text-center ">
-                <img className='' width={250} src="https://gravatar.com/avatar/045c2457648f3ecbf3f41dcb45e208d0?d=mm&r=pg&s=200" alt="" />
-                <h1 className='my-3'>Jonibek</h1>
-                <p className='my-3 h3'>Developer at Tribute</p>
+                <img className='' width={250} src={data?.user?.avatar} alt="" />
+                <h1 className='my-3'>{data?.user?.name}</h1>
+                <p className='my-3 h3'>{data?.company}</p>
             </div>
             <div className="bios text-center">
-              <h3 className='my-3'>Jonibek's Bio</h3>
-              <p className='my-3'>2+ years of experience. FullStack developer. Mentor</p><hr />
+              <h3 className='my-3'>{data?.user?.name}'s Bio</h3>
+              <p className='my-3'>{data?.bio}</p><hr />
               <h3 className='my-3'>Skill Set</h3>
               <ul className='d-flex my-3 justify-content-around'>
-                <li><i class="mx-2 fa-solid fa-check"></i>HTML</li>
-                <li><i class="mx-2 fa-solid fa-check"></i>CSS</li>
-                <li><i class="mx-2 fa-solid fa-check"></i>JS</li>
-                <li><i class="mx-2 fa-solid fa-check"></i>React.js</li>
-                <li><i class="mx-2 fa-solid fa-check"></i>Node.js</li>
-                <li><i class="mx-2 fa-solid fa-check"></i>Expressjs</li>
-                <li><i class="mx-2 fa-solid fa-check"></i>MongoDB</li>
-                <li><i class="mx-2 fa-solid fa-check"></i>NestJS</li>
+              {data?.skills?.map((n) => (
+                <li>
+                  <i className="fa-solid fs-7 fa-check"></i>
+                  {n}
+                </li>
+              ))}
               </ul>
             </div>
             <div className="third d-flex">
               <div  className="w-50 express">
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit sunt quam minima suscipit harum quasi hic tempora, odio tenetur. Provident minus eveniet nostrum excepturi, distinctio animi sit debitis veniam nulla.</p>
+                <h2>Experience</h2>
+                <p><span className='spot1'>{data?.experience[0]?.company}</span></p>
+                <p><span className='spot1'>{data?.experience[0]?.from}</span></p>
+                <p><span className='spot'> Position:</span>{data?.experience[0]?.title}</p>
+                <p><span className='spot'> Location:</span>{data?.experience[0]?.location}</p>
+                <p><span className='spot'>Description:</span>{data?.experience[0]?.description} </p>
               </div>
               <div  className=" w-50 edu">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ab!</p>
+                <h2>Education</h2>
+                <p>Time: {data?.education[0]?.from}</p>
+                <p>Degree: {data?.education[0]?.degree}</p>
+                <p>Field Of Study: {data?.education[0]?.fieldofstudy}</p>
+                <p>School: {data?.education[0]?.school}</p>
               </div>
             </div>
         </form>
+        
         </main>
     </div>
   )

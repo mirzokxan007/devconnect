@@ -9,9 +9,9 @@ const Header = () => {
             <i className='fas fa-code' aria-hidden="true"></i>
              DevConnector</h1>
              <ul className='d-flex mx-3 my-2 justify-content-between align-items-center'>
-                <li className='mx-3'>Developers</li>
+                <li className='mx-3'><Link to="/developers">Developers</Link> </li>
                 <li  className='mx-3'><Link to="/register">Register</Link></li>
-                <li className='mx-3'><Link href="/login">Login</Link></li>
+                <li className='mx-3'><Link to="/login">Login</Link></li>
              </ul>
         </header>
     </div>

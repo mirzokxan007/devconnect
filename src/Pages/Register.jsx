@@ -30,9 +30,9 @@ const Register = () => {
  
  
  try {
-   let {data : {token},message} = await axios.post("/users", values);
+   let {data : {token}} = await axios.post("/users", values);
    localStorage.setItem("token",token);
-   axios.defaults.headers.common["x-auth-token"] =` Bearer ${token}`;
+   axios.defaults.headers.common["x-auth-token"] = token;
   
    toast("Successfull log in ",{type:"success"})
 
@@ -41,7 +41,6 @@ const Register = () => {
  } catch (error) {
   toast("User already exists",{type:"error"})
 
-   console.log(error);
  }
  }
  

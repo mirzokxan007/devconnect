@@ -30,7 +30,7 @@ const Login = () => {
       } = await axios.post("/auth", values);
 
       localStorage.setItem("token", token);
-      axios.defaults.headers.common["x-auth-token"] = `Bearer ${token}`;
+      axios.defaults.headers.common["x-auth-token"] = token;
 
       toast("Logined successfully!😮‍💨 " ,{ type: "success" });
 

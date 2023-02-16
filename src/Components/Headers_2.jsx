@@ -1,7 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify';
 
 const Headers_2 = () => {
+  const navigate = useNavigate();
+  function handleLogout() {
+    toast("Logged out", { type: "info" });
+     localStorage.removeItem("token");
+   // delete axios.defaults.headers.common["x-auth-token"];
+  
+    navigate("/login");
+  }
+
   return (
     <div>
     <header className='header_home d-flex justify-content-between align-items-center'>
@@ -12,7 +22,7 @@ const Headers_2 = () => {
             <li className='mx-3 fs-6'><Link to="/developers">Developers</Link></li>
             <li  className='mx-3 fs-6'><Link  to="/post">Posts</Link></li>
             <li  className='mx-3 fs-6'><Link  to="/dashboard"><i className="fa-solid fa-user"></i>Dashboard</Link></li>
-            <li className='mx-3 fs-6'><Link to="/login"><i className="fa-solid fa-right-from-bracket"></i>Logiout</Link></li>
+            <li className='mx-3 fs-6'><button className='button_log' onClick={handleLogout}><i className="fa-solid fa-right-from-bracket"></i>Logiout</button></li>
          </ul>
     </header>
 </div>

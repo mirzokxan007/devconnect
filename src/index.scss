@@ -1,9 +1,16 @@
 .home{
   background:url(https://cdn2.chakray.com/wp-content/uploads/2021/04/shutterstock_573112123.jpg);
-  height: 750px;
+  height: 800px;
+  padding-top: 200px;
+}
+header{
+  // position: ;
 }
 .header_home{
   background-color: rgba(0, 0, 0, 0.791);
+  position: fixed;
+  top: 0;
+  width: 100%;
   height: 70px;
   border-bottom: 1px solid aqua;
   li{
@@ -35,7 +42,7 @@
   }
 }
 .sort{
-  margin-top: 200px;
+  
   border-radius:10px;
   background: rgba(0, 0, 0, 0.37);
   box-shadow: rgba(3, 249, 249, 0.25) 0px 54px 55px, rgba(3, 249, 249, 0.12) 0px -12px 30px, rgba(3, 249, 249, 0.12) 0px 4px 6px, rgba(3, 249, 249, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -62,6 +69,7 @@
 .sign_up{
   margin-top: 30px;
   h2{
+    margin-top: 100px;
     font-size: 3rem;
     font-weight: bold;
     color:#17a2b8;
@@ -107,6 +115,7 @@
 .sign_in{
   margin-top: 30px;
   h2{
+    margin-top: 100px;
     font-size: 3rem;
     font-weight: bold;
     color:#17a2b8;
@@ -136,6 +145,7 @@
 .dashboard{
   margin-top: 30px;
   h2{
+    margin-top: 100px;
     font-size: 3rem;
     font-weight: bold;
     color:#17a2b8;
@@ -156,6 +166,7 @@
 .post{
   margin-top: 30px;
   h2{
+    margin-top: 100px;
     font-size: 3rem;
     font-weight: bold;
     color:#17a2b8;
@@ -192,8 +203,12 @@
     .user_right{
       margin-left: 100px ;
       p{
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-size: 1.5rem;
+      }
+      li{
+        text-transform: uppercase;
+
       }
       button{
         border:none;
@@ -209,6 +224,7 @@
       }
       .likes{
         width: 50px;
+        margin-top: 20px;
       }
     }
   }
@@ -238,3 +254,307 @@
   }
 }
 
+.button_log{
+  background:  rgba(0, 0, 0, 0);
+  border:none;
+  color:white;
+}
+.just-view{
+  margin-top: 100px;
+  .back_to{
+    padding: 8px;
+    background: #eee;
+    text-decoration: none;
+    color:black;
+  }
+  .user_about{
+    padding: 30px;
+    margin-top: 30px;
+    background: #17a2b8;
+    img{
+      margin-top: 40px;
+      border-radius:50%;
+    }
+    h1{
+      color:white;
+    }
+    p{
+      color:white;
+    }
+  }
+  .bios{
+    margin-top: 20px;
+    padding: 30px;
+    background: #eee;
+    border:1px solid rgba(0, 0, 0, 0.185);;
+    h3{
+      color:#17a2b8;
+    }
+    li{
+      list-style: none;
+    }
+  }
+  .third{
+    margin-top: 20px;
+    .express{
+      padding: 20px;
+      border:1px solid rgba(0, 0, 0, 0.185);
+      width: 65%;
+      margin-right: 20px;
+    }
+    .edu{
+      padding: 20px;
+      border:1px solid rgba(0, 0, 0, 0.185);
+      width: 300px;
+    }
+  }
+}
+.hero{
+  i{
+    color:#17a2b8;
+  }
+  li{
+    list-style: none;
+    color:black;
+    margin-right: 30px;
+    padding: 8px;
+    background: #eee;
+  }
+  .links{
+    text-decoration: none;
+    color:black;
+  }
+}
+.skill{
+  width: 200px;
+}
+.lolq{
+  color:rgba(0, 0, 0, 0.361);
+}
+.user_right{
+  text-transform: capitalize;
+  overflow: hidden;
+
+}
+.post_name{
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+.opens{
+  padding: 5px 15px  ;
+  background: #eee;
+  border:none;
+}
+.twitter{
+  color:#1DA1F2;
+}
+.facebook{
+  color:#4267B2;
+}
+.youtub{
+  color:#FF0000;
+  padding-right: 10px;
+}
+.linkden{
+  color:#0A66C2;
+}
+.insta{
+  color:pink;
+}
+.leko{
+  color:white;
+  text-decoration: none;
+}
+.express{
+  h2{
+  color: #17a2b8 ;
+}
+}
+.edu{
+  h2{
+    color:#17a2b8;
+  }
+
+}
+.spot{
+  font-weight: bold;
+  margin-right: 10px;
+}
+.spot1{
+  font-weight: bold;
+}
+.dinasaur{
+  font-size: 4rem;
+  color:#17a2b8;
+}
+.user1{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  // border:1px solid rgba(0, 0, 0, 0.435); 
+  padding: 20px 20px;
+  margin-top: 100px;
+  // background: #eee;
+  img{
+    border-radius:50%;
+    
+  }
+  
+  .user_left{
+    margin-left: 70px;
+    p{
+      color:#17a2b8;
+    }
+  }
+  .user_right{
+    margin-left: 100px ;
+    p{
+      text-transform: capitalize;
+      font-size: 1.5rem;
+    }
+    li{
+      text-transform: uppercase;
+
+    }
+    button{
+      border:none;
+      margin-right: 10px;
+    }
+    small{
+      color:rgba(0, 0, 0, 0.476);
+    }
+    .dis{
+        background: #17a2b8;
+        padding: 8px;
+        color:white;
+    }
+    .likes{
+      width: 50px;
+    }
+  }
+}
+.leroo{
+  margin-top: 100px;
+}
+.dis{
+  margin-top: 20px;
+  
+  .leave{
+    background: #17a2b8;
+    padding: 8px;
+  }
+}
+.disq{
+  margin-top: 20px;
+  padding: 8px;
+  background: #eee;
+}
+
+
+.loader {
+  // font-style: 4rem;
+  margin-left: 480px;
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: rgb(159, 37, 37);
+}
+  .loader:before,
+  .loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+  }
+  .loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+  }
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}
+
+
+@media (max-width: 714px){
+  .header_home{
+    h1{
+      font-size: 20px;
+
+    }
+    li{
+      font-size: 10px;
+    }
+  }
+  .skill{
+    display: none;
+  }
+  
+}
+@media (max-width: 550px){
+  .header_home{
+    h1{
+      font-size: 20px;
+      display: none;
+    }
+    li{
+      font-size: 10px;
+    }
+    ul{
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  
+}

@@ -1,23 +1,50 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect,useState } from 'react'
+import { Link } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom'
 
-const Postlist = () => {
+const Postlist = ({datarefresh}) => {
+  const [data, useData] = useState();
+
+  useEffect(() => {
+    async function getMe() {
+      try {
+        let { data } = await axios.get("/posts/");
+        useData(data);
+      } catch (error) {
+        
+      }
+    }
+    getMe();
+  }, [datarefresh]);
+
+     
+
+// .log(data);
   return (
     <div>
+      
+      {data?.map(({ text,name,date,avatar,likes,user,_id }) => (
       <div className="user d-flex  my-3">
             <div className="user_left">
-            <img width={120} src="https://gravatar.com/avatar/ad7f517159350ae1997713b686130c98?d=mm&r=pg&s=200" alt="" />
-            <p className=''>Jonibek</p>
+            <Link to={`/view/${user}`} >
+            <img width={120} src={avatar} alt="" />
+            <p className='post_name'>{name}</p></Link>
             </div>
             <div className="user_right ">
-                <p className='my-2'>Tugadi</p>
-                <small>Posted on 12.02.2023</small>
+                <p className='  post_text my-2'>{text}</p>
+                <small>Posted on: {date}</small>
             <div className="butns my-3 d-flex">
-                <button className='likes'><i class="fa-solid fa-thumbs-up"></i></button>
-                <button className='likes'><i class="fa-solid fa-thumbs-down"></i></button>
-                <button className='dis'>Discussion</button>
+                <button className='likes'><i className="fa-solid fa-thumbs-up"></i>
+                {likes.length}
+                </button>
+                <button className='likes'><i className="fa-solid fa-thumbs-down"></i></button>
+                <button className='dis'> <Link className='text-white text-decoration-none' to={`/single/${_id}`}> Discussion</Link></button>
             </div>
             </div>
         </div>
+         ))} 
+         <p className="loader"></p>
     </div>
   )
 }

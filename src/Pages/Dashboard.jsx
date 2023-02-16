@@ -1,23 +1,45 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React,{useEffect, useState} from 'react'
+// import { Link, useNavigate } from 'react-router-dom'
 import Headers_2 from '../Components/Headers_2'
+// import axios from "axios";
+import DashboardList from '../Components/DashboardList';
+import Dashboard_two from '../Components/Dashboard_two';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Dashboard = () => {
+  
+  let [nameme, setName] = useState ();
+  const navigate = useNavigate()
+  useEffect(() => {
+    let token = localStorage.getItem("token")
+
+
+    if(!token) return navigate("/login")
+
+    async function getMe() {
+      try {
+        let {data} = await axios.get("/profile/me")
+        setName(data)
+
+     
+      } catch (error) {
+        
+      }
+    }
+
+    getMe();
+  }, [])
+  
 
   return (
     <div>
         <Headers_2/>
-        <main className='dashboard container container w-75'>
-     <form >
-        <h2 className='h1 '>Dashboard</h2>
-        <h3 className='h3 my-3'>
-        <i className=" fa-solid fa-user"></i>
-       Welcome mirzokxan
-        </h3>
-        <p>You have not yet setup a profile, please add some info</p>
-           <button><Link className='link_1' to="/createprofile">Create Profil</Link></button>
-        </form>
-    </main>
+        {nameme?<DashboardList/>: <Dashboard_two/>  }
+         
+       
+       
+        
     </div>
   )
 }
